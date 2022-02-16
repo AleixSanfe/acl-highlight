@@ -1,25 +1,47 @@
 {
-    "name": "acl-highlight",
-    "displayName": "acl-highlight",
-    "description": "Highlight for ACL policies",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.64.0"
-    },
-    "categories": [
-        "Programming Languages"
+  "name": "acl-highlight",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AleixSanfe/acl-highlight.git"
+  },
+  "author": {
+    "name" : "Aleix Sanfeliu",
+    "url" : "https://twitter.com/AleixSanfe"
+  },
+  "displayName": "acl-highlight",
+  "description": "Highlight for ACL policies",
+  "version": "0.0.1",
+  "license": "GPL-3.0",
+  "engines": {
+    "vscode": "^1.64.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "acl.txt",
+        "aliases": [
+          "acl.txt",
+          "acl.txt"
+        ],
+        "extensions": [
+          ".acl.txt"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "acl.txt",
-            "aliases": ["acl.txt", "acl.txt"],
-            "extensions": [".acl.txt"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "acl.txt",
-            "scopeName": "source.acl.txt",
-            "path": "./syntaxes/acl.txt.tmLanguage.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "acl.txt",
+        "scopeName": "source.acl.txt",
+        "path": "./syntaxes/acl.txt.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.21",
+    "js-yaml": "^4.1.0"
+  }
 }
