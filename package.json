@@ -1,0 +1,25 @@
+{
+    "name": "acl-highlight",
+    "displayName": "acl-highlight",
+    "description": "Highlight for ACL policies",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.64.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "acl.txt",
+            "aliases": ["acl.txt", "acl.txt"],
+            "extensions": [".acl.txt"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "acl.txt",
+            "scopeName": "source.acl.txt",
+            "path": "./syntaxes/acl.txt.tmLanguage.json"
+        }]
+    }
+}
